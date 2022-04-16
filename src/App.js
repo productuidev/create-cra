@@ -1,15 +1,32 @@
-import logo from './logo.svg';
+// import React from 'react';
+// import logo from './logo.svg';
 import './App.css';
+import MyHeader from './MyHeader';
+import MyFooter from './MyFooter';
 
 function App() {
+
+  let name = "정수연";
+  
+  const style = {
+    App: { backgroundColor:"#282c34", },
+    h2: { color:"#fff", },
+    boldTxt: { color:"#61dafb", },
+  };
+
   return (
-    <div className="App">
+    <div style={style.App}>
+      <MyHeader />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>안녕 리액트</h2>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
+        <h2 style={style.h2}>안녕 리액트 {name}</h2>
+        <strong class="boldTxt" style={style.boldTxt}>React.js</strong>
       </header>
+      <MyFooter />
     </div>
+    // <React.Fragment>
+    //   <MyHeader />
+    //   <MyFooter />
+    // </React.Fragment>
   );
 }
 
