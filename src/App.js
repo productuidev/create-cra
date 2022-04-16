@@ -10,15 +10,18 @@ function App() {
   
   const style = {
     App: { backgroundColor:"#282c34", },
-    h2: { color:"#fff", },
+    whiteTxt: { color:"#fff", },
     boldTxt: { color:"#61dafb", },
   };
+
+  const number = 5;
 
   return (
     <div style={style.App}>
       <MyHeader />
       <header className="App-header">
-        <h2 style={style.h2}>안녕 리액트 {name}</h2>
+        <h2 style={style.whiteTxt}>안녕 리액트 {name}</h2>
+        <p style={style.whiteTxt}>{number}는 : {number % 2 === 0 ? "짝수" : "홀수"}</p>
         <strong class="boldTxt" style={style.boldTxt}>React.js</strong>
       </header>
       <MyFooter />
